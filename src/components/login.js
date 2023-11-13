@@ -23,9 +23,11 @@ console.log(json);
 if (json.success) {
     //save the auth token and redirect
     localStorage.getItem('token' , json.authtoken);
+    props.showAlert("login successfully" , "success");
     history.push("/")
+   
 } else {
-    alert("invalid credential");
+  props.showAlert("invalid credential" , "danger");
 }
     }
     const onChange = (e) =>{
