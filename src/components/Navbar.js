@@ -1,12 +1,12 @@
 import React   from 'react'
 import {
- Link  , useLocation
+ Link  , useLocation ,useNavigate
     }from "react-router-dom"
-    import { useHistory } from "react-router-dom";
+
 
 
 const Navbar = () => {
-  let history = useHistory();
+  let history = useNavigate();
   const handlelogout =() => {
     localStorage.removeItem ('token');
     history.pushState('/login')

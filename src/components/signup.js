@@ -1,9 +1,9 @@
 import React , {useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
-const signup = (props) => {
+const Signup = (props) => {
   const [ credential , setcredential] = useState({ name :"" ,email : "" , password :"" ,cpassword: "" })
-  let history = useHistory();
+  let history = useNavigate();
  
   const handleSubmit = async(e) =>{
       e.preventDefault();
@@ -57,4 +57,4 @@ if (json.success) {
   )
 }
 
-export default signup
+export default Signup
