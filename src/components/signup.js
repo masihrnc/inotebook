@@ -3,7 +3,7 @@ import {  useNavigate } from 'react-router-dom';
 
 const Signup = (props) => {
   const [ credential , setcredential] = useState({ name :"" ,email : "" , password :"" ,cpassword: "" })
-  let history = useNavigate();
+  let navigate = useNavigate();
  
   const handleSubmit = async(e) =>{
       e.preventDefault();
@@ -23,7 +23,7 @@ console.log(json);
 if (json.success) {
   //save the auth token and redirect
   localStorage.getItem('token' , json.authtoken);
-  history.push("/")
+  navigate("/");
   props.showAlert("successfully create  credential" , "success");
 } else {
   props.showAlert("invalid credential" , "danger");

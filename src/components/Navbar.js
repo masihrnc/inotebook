@@ -6,10 +6,10 @@ import {
 
 
 const Navbar = () => {
-  let history = useNavigate();
+  let navigate = useNavigate();
   const handlelogout =() => {
     localStorage.removeItem ('token');
-    history.pushState('/login')
+    navigate('/login');
   }
   let location = useLocation();
  /* React.useEffect(() => {

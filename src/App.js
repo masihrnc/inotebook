@@ -8,8 +8,10 @@ import Home from './components/Home';
 import Aboutus from './components/Aboutus';
 import NoteState from './context/notes/NoteState';
 import Alert from './components/Alert';
-import Signup from './components/signup';
-import Login from './components/login';
+import Login from './components/Login';
+import Signup from './components/Signup';
+
+
 
 
 function App() {
@@ -33,8 +35,8 @@ function App() {
     <Routes>
       <Route exact path= "/" element={<Home showAlert = {showAlert}/>}></Route>
       <Route exact path= "/Aboutus" element={<Aboutus/>}> </Route>
-      <Route exact path= "/Login" element={<Login showAlert = {showAlert}/>}> </Route>
-      <Route exact path= "/Signup" element={<Signup showAlert = {showAlert}/>}> </Route>
+      <Route exact path="/Login" element={<Login showAlert = {showAlert}/>}> </Route>
+      <Route exact path="/Signup" element={<Signup showAlert = {showAlert}/>}> </Route>
       
     </Routes>
     </div>
